@@ -1,0 +1,23 @@
+h1
+{
+    color : green;
+    font-style: normal;
+    text-decoration-line: underline;
+    
+}
+
+
+.green-class
+{
+    color : teal;
+    text-decoration-line : none;
+    font-weight : 700;
+    font-size : 18px;
+    font-family : cursive;
+}
+
+/* .wavy-link{
+    color: red;
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+} */

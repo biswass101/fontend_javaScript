@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing Promises</title>
+</head>
+<body>
+    <h1>My Promised In JavaScript</h1>
+    <button class = "res">Promise Resolve</button>
+    <button class = "rej">Promise Rejected</button>
+    <script>
+        const resolveBtn = document.querySelector(".res")
+        const rejectBtn = document.querySelector(".rej")
+        const p = new Promise((resolve, reject) =>
+        {
+            resolveBtn.addEventListener("click", () =>{
+                resolve("Ok Bhai Ok")
+            })
+            rejectBtn.addEventListener("click", () =>{
+                reject("No Bhai No")
+            })
+        })
+        p.then((data) =>
+        {
+            console.log(data);
+        }).catch((err) =>
+        {
+            console.log(err);
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+body
+{
+    margin : 0;
+    background-color: #decdac;
+    font-family: cursive;
+}
+
+.popup
+{
+    width: 500px;
+    height: 300px;
+    padding: 8px;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 5px 4px 2px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    /*way-1: */
+    /* inset: 0px;
+    margin: auto; */
+    /* display: none; */
+    /* transform: scale(0);
+    transition: all 0.2s ease-in-out; */
+
+
+    /*way-2: */
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 0.2s ease-in-out;
+    top: 0;
+    left: 0;
+}
+
+.popup-open .popup
+{
+    /*way-1: */
+    /* display: block; */
+    /* transform: scale(1); */
+    transform: scale(1);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.close-icon
+{
+    font-size: 48px;
+    font-weight: 700;
+    position: absolute;
+    right: 16px;
+    cursor: pointer;
+    font-family: serif;
+    
+}
+
+.overlay
+{
+    display: none;
+    position: fixed;
+    inset: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-open .overlay
+{
+    display: block;
+}

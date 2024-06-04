@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing CallBack</title>
+</head>
+<body>
+    <h1>Testing CallBack</h1>
+    <script>
+        debugger
+        function sayHi(string, getFunc)
+        {
+            console.log(string);
+            let x = 10;
+            getFunc(x)
+        }
+        sayHi("Niloy", (val) =>
+        {
+            console.log("Hi");
+            console.log(val);
+        })
+    </script>
+</body>
+</html>
