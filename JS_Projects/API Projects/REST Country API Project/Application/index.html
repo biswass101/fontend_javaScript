@@ -18,11 +18,26 @@
 <body>
     <header class = "header-container">
         <div class = "header-content">
-            <h2 class="title">Where in the world?</h2>
-            <p><i class="fa-regular fa-moon"></i>&nbsp;&nbsp;Dark mode</p>
+            <h2 class="title"><a href="/Application/index.html">Biswass's World is here!</a></h2>
+            <p class = "theme-changer"><i class="fa-regular fa-moon"></i>&nbsp;&nbsp;<span class ="theme-text">Dark mode</span></p>
         </div>
     </header>
     <main>
+        <div class="serach-filter-container">
+            <div class="search-container">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="search for a country...">
+            </div>
+            <select class = "filter-by-region">
+                <option hidden>Filter By Region</option>
+                <option value="Africa">Africa</option>
+                <option value="America">America</option>
+                <option value="Asia">Asia</option>
+                <option value="Europe">Europe</option>
+                <option value="Oceania">Oceania</option>
+            </select>
+        </div>
+        
         <div class = "countries-container">
         </div>
     </main>

@@ -4,8 +4,18 @@
 }
 body
 {
+    --background-color: white;
+    --text-color: black;
+    --elements-color: white;
     margin: 0;
     font-family: "Nunito", "sens-serif";
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+body.dark{
+    --background-color: hsl(207, 26%, 17%);
+    --text-color: white;
+    --elements-color: hsl(209, 23%, 22%);
 }
 a
 {
@@ -21,6 +31,7 @@ a
 {
     box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.1);
     padding-inline: 24px;
+    background-color: var(--elements-color);
 }
 
 .header-content
@@ -31,6 +42,10 @@ a
     max-width: 1200px;
     margin: 0 auto;
 }
+.theme-changer
+{
+    cursor: pointer;
+}
 main
 {
     padding: 24px;
@@ -38,11 +53,11 @@ main
 .countries-container
 {
     max-width: 1200px;
-    margin-inline: auto;
     margin-top: 16px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-inline: auto;
     gap: 64px;
 }
 .country-card
@@ -54,6 +69,7 @@ main
     box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.2);
     padding-bottom: 24px;
     transition: all 0.2s ease-in-out;
+    background-color: var(--elements-color);
 }
 .country-card img
 {
@@ -77,4 +93,76 @@ main
 .card-text p
 {
     margin-block: 8px;
+}
+
+.serach-filter-container
+{
+    max-width: 1200px;
+    margin-inline: auto;
+    margin-top: 16px;
+    margin-bottom: 48px;
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.search-container
+{
+    box-shadow: 0 0 12px 0px rgba(0, 0, 0, 0.15);
+    max-width: 350px;
+    width: 100%;
+    border-radius: 4px;
+    padding-left: 24px;
+    color: #999;
+    overflow: hidden;
+    background-color: var(--elements-color);
+    color: var(--text-color);
+}
+
+.search-container input
+{
+    border: none;
+    outline: none;
+    padding: 16px;
+    font-size: 16px;
+    width:  90%;
+    background-color: inherit;
+    color: inherit;
+}
+.search-container input ::placeholder
+{
+    color: #999;
+}
+
+.filter-by-region
+{
+    width: 250px;
+    padding: 16px;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    background-color: var(--elements-color);
+    color: var(--text-color);
+
+}
+@media(max-width: 768px)
+{
+    .countries-container
+    {
+        justify-content: center;
+    }
+    .title
+    {
+        font-size: 16px;
+
+    }
+    .header-content p
+    {
+        font-size: 12px;
+    }
+    .serach-filter-container
+    {
+        flex-direction: column;
+    }
 }
